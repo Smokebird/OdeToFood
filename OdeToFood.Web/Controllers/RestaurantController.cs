@@ -20,6 +20,13 @@ namespace OdeToFood.Web.Controllers
         }
 
         [HttpGet]
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+
+        [HttpGet]
         public ActionResult Details(int id)
         {
             var model = _db.Get(id);
