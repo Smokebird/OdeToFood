@@ -28,6 +28,16 @@ namespace OdeToFood.data3.Services
             restaurant.Id = _restaurants.Max(x => x.Id) + 1;
         }
 
+        public void Edit(Restaurant restaurant)
+        {
+            var index = _restaurants.FindIndex(x => x.Id == restaurant.Id);
+            if(index != -1)
+            {
+                _restaurants[index].Name = restaurant.Name;
+                _restaurants[index].Cuisine = restaurant.Cuisine;
+            }
+        }
+
         public IEnumerable<Restaurant> GetAll()
         {
             return _restaurants.OrderBy(r => r.Name);
