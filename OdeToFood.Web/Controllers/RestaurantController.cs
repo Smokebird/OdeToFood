@@ -50,5 +50,16 @@ namespace OdeToFood.Web.Controllers
             }
             return View(model);
         }
+
+        [HttpGet]
+        public ActionResult Edit(int id)
+        {
+            var model = _db.Get(id);
+            if(model == null)
+            {
+                return View("NotFound");
+            }
+            return View(model);
+        }
     }
 }
