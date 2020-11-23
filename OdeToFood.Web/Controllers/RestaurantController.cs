@@ -1,5 +1,5 @@
-﻿using OdeToFood.Data.Services;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using OdeToFood.data3.Services;
 
 namespace OdeToFood.Web.Controllers
 {
@@ -16,6 +16,17 @@ namespace OdeToFood.Web.Controllers
         public ActionResult Index()
         {
             var model = _db.GetAll();
+            return View(model);
+        }
+
+        [HttpGet]
+        public ActionResult Details(int id)
+        {
+            var model = _db.Get(id);
+            if(model == null)
+            {
+                return View("NotFound");
+            }
             return View(model);
         }
     }

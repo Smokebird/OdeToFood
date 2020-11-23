@@ -8,6 +8,6 @@ namespace OdeToFood.Data.Models
     {
         public string Name { get; set; }
         public int Id { get; set; }
-        public CusineType cusine { get; set; }
+        public CusineType Cusine { get; set; }
     }
 }
