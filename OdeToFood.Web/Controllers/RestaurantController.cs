@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using OdeToFood.Data.Modals;
 using OdeToFood.data3.Services;
 
 namespace OdeToFood.Web.Controllers
@@ -17,6 +18,26 @@ namespace OdeToFood.Web.Controllers
         {
             var model = _db.GetAll();
             return View(model);
+        }
+
+        [HttpGet]
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(Restaurant restaurant)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.Add(restaurant);
+                return RedirectToAction("Details", new { id = restaurant.Id});
+            }
+
+            return View(restaurant);
         }
 
         [HttpGet]
