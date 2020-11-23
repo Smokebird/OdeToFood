@@ -13,9 +13,9 @@ namespace OdeToFood.Data.Services
         public InMemoryRestaurantData()
         {
             _restaurants = new List<Restaurant> {
-            new Restaurant{ cusine = CusineType.French, Id = 1, Name = "Fancy"},
-            new Restaurant{ cusine = CusineType.Indian, Id = 2, Name = "Spicy"},
-            new Restaurant{ cusine = CusineType.Italian, Id = 3, Name = "Garlic"}
+            new Restaurant{ Cusine = CusineType.French, Id = 1, Name = "Fancy"},
+            new Restaurant{ Cusine = CusineType.Indian, Id = 2, Name = "Spicy"},
+            new Restaurant{ Cusine = CusineType.Italian, Id = 3, Name = "Garlic"}
             };
         }
 

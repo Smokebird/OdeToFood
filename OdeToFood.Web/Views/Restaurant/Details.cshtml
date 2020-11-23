@@ -1,10 +1,4 @@
-﻿@model OdeToFood.Data.Models.Restaurant
-
-@{
-    ViewBag.Title = "Get";
-}
-
-<h2>Get</h2>
+﻿@model OdeToFood.Data.Modals.Restaurant
 
 <div>
     <h4>Restaurant</h4>
@@ -18,12 +12,12 @@
             @Html.DisplayFor(model => model.Name)
         </dd>
 
-                <dt>
-            @Html.DisplayNameFor(model => model.cusine)
+        <dt>
+            @Html.DisplayNameFor(model => model.Cuisine)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.cusine)
+            @Html.DisplayFor(model => model.Cuisine)
         </dd>
 
     </dl>
