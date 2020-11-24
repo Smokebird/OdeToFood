@@ -8,6 +8,7 @@ namespace OdeToFood.Data.Modals
         public int Id { get; set; }
 
         [Required]
+        [MaxLength(255)]
         public string Name { get; set; }
 
         public CuisineType Cuisine { get; set; }
