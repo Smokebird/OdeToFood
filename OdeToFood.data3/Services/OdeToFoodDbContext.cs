@@ -3,8 +3,8 @@ using System.Data.Entity;
 
 namespace OdeToFood.data3.Services
 {
-    class OdeToFoodDbContext: DbContext
+    public class OdeToFoodDbContext: DbContext
     {
-        public DbSet<Restaurant> _db { get; set; }
+        public DbSet<Restaurant> Restaurants { get; set; }
     }
 }
